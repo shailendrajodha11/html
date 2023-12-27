@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+
+    <script src="https://kit.fontawesome.com/98a9a73187.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #e7eff3;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            height: 6.5vh;
+            background-color: #4d636f;
+            position: sticky;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .left {
+            width: 28%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 9vw;
+            height: 100%;
+            background-color: #3a4b53;
+        }
+
+        .news,
+        .user,
+        .message,
+        .bell {
+            width: 16%;
+            height: 100%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .right {
+            width: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right img {
+            width: 30%;
+            border-radius: 100%;
+        }
+
+        .right:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .contentbox {
+            display: flex;
+        }
+
+        /* bellhover */
+        .bellho {
+            width: 21vw;
+            height: 16vh;
+            background-color: white;
+            line-height: 5vh;
+            position: absolute;
+            margin-left: 22.2vw;
+            z-index: 1000;
+            box-shadow: 2px 2px 18px gray;
+        }
+
+        .bellho a {
+            display: flex;
+            justify-content: left;
+        }
+
+        .bellho a p {
+            display: block;
+            margin-left: 1%;
+            text-align: left;
+            font-family: Verdana, sans-serif;
+            color: black;
+            text-align: left;
+        }
+
+        /* LEFT CONTAINER's */
+        .leftboxs {
+            width: 25vw;
+            height: 135vh;
+            margin-top: 1.7%;
+            margin-left: 1%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* LEFT BOX -- 1ST */
+        .lb1 {
+            width: 100%;
+            height: 30%;
+            background-color: white;
+            margin-top: 1%;
+            border-radius: 2%;
+            font-family: Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lb1txt1 {
+            font-family: Verdana, sans-serif;
+            font-size: 125%;
+            margin-top: 1%;
+        }
+
+        .lb1 img {
+            width: 33%;
+            border-radius: 100%;
+            margin-top: 3%;
+        }
+
+        .lb1 hr {
+            width: 90%;
+        }
+
+        .lb1 p {
+            margin-left: -50%;
+            margin-top: 7%;
+            font-family: Verdana, sans-serif;
+            font-size: 90%;
+        }
+
+        .lb1 p i {
+            color: #607d8b;
+        }
+
+        /* LEFT BOX -- 2ND */
+        .lb2 {
+            width: 100%;
+            height: 12%;
+            background-color: #7d97a5;
+            margin-top: 5.5%;
+            font-family: Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lb2 p {
+            color: white;
+            font-family: Verdana, sans-serif;
+            font-size: 90%;
+            margin: 4%;
+        }
+
+        /* LEFT BOX -- 3RD */
+        .lb3 {
+            width: 100%;
+            height: 13.2%;
+            margin-top: 5.5%;
+            background-color: white;
+        }
+
+        .lb3 p {
+            display: block;
+            margin: 3.5%;
+            margin-left: 6%;
+            font-family: verdana, sans-serif;
+            font-size: 90%;
+        }
+
+        .lb3 span {
+            height: 8%;
+            display: inline-block;
+            font-family: verdana, sans-serif;
+            font-size: 73%;
+        }
+
+        .tag1 {
+            background-color: #303e45;
+            color: white;
+            padding: 0.7% 2.3% 2% 2.3%;
+            margin-left: 6%;
+            text-align: center;
+        }
+
+        .tag2 {
+            background-color: #435761;
+            color: white;
+            padding: 0.7% 2.3% 2% 2.3%;
+            text-align: center;
+        }
+
+        .tag3 {
+            background-color: #435761;
+            color: white;
+            margin-left: 6%;
+            margin-top: 2%;
+            padding: 0.7% 2% 2% 2%;
+            text-align: center;
+        }
+
+        .tag4 {
+            background-color: #57707d;
+            color: white;
+            margin-top: 2%;
+            padding: 0.7% 2% 2% 2%;
+            text-align: center;
+        }
+
+        .tag5 {
+            background-color: #becbd2;
+            color: black;
+            margin-top: 2%;
+            padding: 0.7% 2% 2% 2%;
+            text-align: center;
+        }
+
+        .tag6 {
+            background-color: #dfe5e8;
+            color: black;
+            margin-top: 2%;
+            margin-left: 6%;
+            padding: 0.7% 2% 2% 2%;
+            text-align: center;
+        }
+
+        .tag7 {
+            color: black;
+            margin-top: 2%;
+            padding: 0.7% 2% 2% 2%;
+            text-align: center;
+        }
+
+        /* LEFT BOX -- 4TH */
+        .lb4 {
+            height: 11%;
+            width: 99.5%;
+            background-color: #dfe5e8;
+            margin-top: 5.5%;
+            border: 1px solid #ccc;
+            border-radius: 3%;
+        }
+
+        .lb4 p {
+            margin: 5%;
+            margin-left: 6%;
+            font-family: verdana, sans-serif;
+            font-size: 90%;
+        }
+
+        .lb4txt {
+            font-family: verdana, sans-serif;
+            margin-left: 6%;
+            font-size: 90%;
+            line-height: 160%;
+        }
+
+
+        /* MIDDLE CONTAINER'S */
+        .midboxs {
+            width: 51vw;
+            height: 232vh;
+            margin-top: 1.7%;
+            margin-left: 1%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* MIDDLE BOX -- 1ST */
+        .mb1 {
+            width: 100%;
+            height: 22vh;
+            margin-top: 1%;
+            border-radius: 1%;
+            background-color: white;
+        }
+
+        .mb1 p {
+            opacity: 0.60;
+            margin-top: 3%;
+            font-family: verdana, sans-serif;
+            font-size: 90%;
+            margin-left: 3%;
+        }
+
+        .mb1 input {
+            width: 90%;
+            margin-top: 2.7%;
+            display: block;
+            margin-left: 2.5%;
+            padding: 1.7%;
+            border-radius: 0%;
+            border: 1px solid #ccc;
+        }
+
+        .mb1 button {
+            width: 13%;
+            height: 25%;
+            margin-top: 2.5%;
+            margin-left: 2.5%;
+            border: 0px;
+            background-color: #607d8b;
+            color: white;
+        }
+
+        .mb1 button:hover {
+            cursor: pointer;
+            background-color: gray;
+            color: black;
+        }
+
+        /* MIDDLE BOX -- 2ND */
+        .mb2 {
+            width: 100%;
+            height: 65vh;
+            background-color: white;
+            margin-top: 2.5%;
+            border-radius: 1%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mb2 .upper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mb2 .left {
+            width: 20vw;
+            height: 10vh;
+            font-family: verdana, sans-serif;
+            font-size: 120%;
+            margin-top: 2vh;
+        }
+
+        .left img {
+            width: 23%;
+            margin-left: 1vw;
+            border-radius: 100%;
+        }
+
+        .mb2 .right {
+            float: right;
+            width: 5vw;
+            margin-top: 4vh;
+            height: 7%;
+            font-family: verdana, sans-serif;
+            color: gray;
+            font-size: 90%;
+        }
+
+        .mb2 hr {
+            margin-top: 3vh;
+            width: 95%;
+            margin-left: 2%;
+            margin-bottom: 2vh;
+        }
+
+        .mb2txt {
+            margin-left: 2%;
+            font-family: Open Sans, sans-serif;
+            font-size: 87%;
+            line-height: 3vh;
+        }
+
+        .mb2pic img {
+            width: 23.3vw;
+            margin-top: 2vh;
+            margin-left: 1.3vw;
+        }
+
+        .mb2btn {
+            display: flex;
+        }
+
+        .mb2 button {
+            width: 10vw;
+            height: 5vh;
+            margin-top: 2.5%;
+            margin-left: 2.5%;
+            border: 0px;
+            background-color: #607d8b;
+            color: white;
+        }
+
+        .mb2 button:hover {
+            cursor: pointer;
+            background-color: gray;
+            color: black;
+        }
+
+
+        /* MIDDLE BOX -- 3 */
+        .mb3 {
+            width: 100%;
+            height: 35vh;
+            background-color: white;
+            margin-top: 2.5%;
+            border-radius: 1%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mb3 .upper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mb3 .left {
+            width: 20vw;
+            height: 10vh;
+            font-family: verdana, sans-serif;
+            font-size: 120%;
+            margin-top: 2vh;
+        }
+
+        .left img {
+            width: 23%;
+            margin-left: 1vw;
+            border-radius: 100%;
+        }
+
+        .mb3 .right {
+            float: right;
+            width: 5vw;
+            margin-top: 4vh;
+            height: 7%;
+            font-family: verdana, sans-serif;
+            color: gray;
+            font-size: 90%;
+        }
+
+        .mb3 hr {
+            margin-top: 3vh;
+            width: 95%;
+            margin-left: 2%;
+            margin-bottom: 2vh;
+        }
+
+        .mb3txt {
+            margin-left: 2%;
+            font-family: Open Sans, sans-serif;
+            font-size: 87%;
+            line-height: 3vh;
+        }
+
+        .mb3btn {
+            display: flex;
+        }
+
+        .mb3 button {
+            width: 10vw;
+            height: 5vh;
+            margin-top: 2.5%;
+            margin-left: 2.5%;
+            border: 0px;
+            background-color: #607d8b;
+            color: white;
+        }
+
+        .mb3 button:hover {
+            cursor: pointer;
+            background-color: gray;
+            color: black;
+        }
+
+        /* MIDDLE BOX -- 4 */
+        .mb4 {
+            width: 100%;
+            height: 102vh;
+            background-color: white;
+            margin-top: 2.5%;
+            border-radius: 1%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mb4 .upper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mb4 .left {
+            width: 20vw;
+            height: 10vh;
+            font-family: verdana, sans-serif;
+            font-size: 120%;
+            margin-top: 2vh;
+        }
+
+        .left img {
+            width: 23%;
+            margin-left: 1vw;
+            border-radius: 100%;
+        }
+
+        .mb4 .right {
+            float: right;
+            width: 5vw;
+            margin-top: 4vh;
+            height: 7%;
+            font-family: verdana, sans-serif;
+            color: gray;
+            font-size: 90%;
+        }
+
+        .mb4 hr {
+            margin-top: 3vh;
+            width: 95%;
+            margin-left: 2%;
+            margin-bottom: 2vh;
+        }
+
+        .mb4 p {
+            margin-top: 1.5vh;
+            font-family: verdana, sans-serif;
+            font-size: 85%;
+            margin-left: 1.3vw;
+        }
+
+        .mb4pic {
+            max-width: 2%;
+            margin-top: 2vh;
+            margin-left: 1vw;
+        }
+
+        .mb4txt {
+            margin-left: 2%;
+            margin-top: 3vh;
+            font-family: Open Sans, sans-serif;
+            font-size: 87%;
+            line-height: 3vh;
+        }
+
+        .mb4btn {
+            display: flex;
+        }
+
+        .mb4 button {
+            width: 10vw;
+            height: 5vh;
+            margin-top: 2.5%;
+            margin-left: 2.5%;
+            border: 0px;
+            background-color: #607d8b;
+            color: white;
+        }
+
+        .mb4 button:hover {
+            cursor: pointer;
+            background-color: gray;
+            color: black;
+        }
+
+
+        /* RIGHT CONTAINER */
+        .rightboxs {
+            height: 135vh;
+            width: 18vw;
+            margin-top: 3vh;
+            margin-left: 1vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* RIGHT BOX -- 1ST */
+        .rb1 {
+            height: 42vh;
+            width: 100%;
+            border-radius: 2%;
+            margin-top: 1vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            font-family: verdana, sans-serif;
+        }
+
+        .rb1 p {
+            margin: 2.2vh;
+            font-family: verdana, sans-serif;
+            font-size: 85%;
+        }
+
+        .rb1 h6 {
+            margin-top: 2.2vh;
+            font-family: verdana, sans-serif;
+            font-size: 95%;
+        }
+
+        .rb1 img {
+            width: 80%;
+        }
+
+        .rb1 button {
+            width: 80%;
+            height: 5vh;
+            border: 0px;
+            background-color: #dfe5e8;
+        }
+
+        .rb1 button:hover {
+            cursor: pointer;
+            background-color: gray;
+        }
+
+        /* RIGHT BOX -- 2ND */
+        .rb2 {
+            height: 31vh;
+            width: 100%;
+            border-radius: 2%;
+            margin-top: 3vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            font-family: verdana, sans-serif;
+            font-size: 85%;
+        }
+
+        .rb2 p {
+            margin: 2.2vh;
+            font-family: verdana, sans-serif;
+            font-size: 100%;
+        }
+
+        .rb2 img {
+            width: 37%;
+            font-family: verdana, sans-serif;
+        }
+
+        .rb2btn {
+            width: 85%;
+            margin-top: 3vh;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rb2btn .btn1 button {
+            width: 7vw;
+            height: 4vh;
+            border: 0px;
+            background-color: #4CAF50;
+            color: white;
+            align-items: center;
+        }
+
+        .rb2btn .btn2 button {
+            width: 7vw;
+            height: 4vh;
+            border: 0px;
+            background-color: #f44336;
+            color: white;
+            align-items: center;
+        }
+
+        .btn1 button:hover {
+            cursor: pointer;
+            color: black;
+            background-color: gray;
+        }
+
+        .btn2 button:hover {
+            cursor: pointer;
+            color: black;
+            background-color: gray;
+        }
+
+        /* RIGHT BOX -- 3 */
+        .rb3 {
+            width: 100%;
+            height: 13vh;
+            background-color: white;
+            margin-top: 2.7vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: verdana, sans-serif;
+            font-size: 85%;
+        }
+
+        /* RIGHT BOX -- 4 */
+        .rb4 {
+            width: 100%;
+            height: 18vh;
+            background-color: white;
+            margin-top: 2.7vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* FOOTER */
+        .footer {
+            margin-top: 4vh;
+        }
+
+        .foot1 {
+            width: 98.8vw;
+            height: 9vh;
+            background-color: #435761;
+            color: white;
+            font-family: verdana, sans-serif;
+            font-size: 110%;
+            display: flex;
+            align-items: center;
+        }
+
+        .foot2 {
+            width: 98.8vw;
+            height: 8vh;
+            background-color: #303e45;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: verdana, sans-serif;
+        }
+
+        .foot1 p {
+            margin-left: 2vw;
+        }
+
+        .foot2 p {
+            margin-left: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="left">
+            <a href="#" class="logo"><i class="fa fa-home w3-margin-right"></i> &nbsp; &nbsp; Logo</a>
+            <a href="#" class="news"><i class="fa fa-globe"></i></a>
+            <a href="#" class="user"><i class="fa fa-user"></i></a>
+            <a href="#" class="message"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="bell"><i class="fa fa-bell an"></i></a>
+        </div>
+        <div class="right">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="">
+        </div>
+    </div>
+
+    <div class="bellho">
+        <a href="#">
+            <p>One new friend Request</p>
+        </a>
+        <a href="#">
+            <p>John Doe posted on your wall</p>
+        </a>
+        <a href="#">
+            <p>Jane likes your post</p>
+        </a>
+    </div>
+
+    <div class="all">
+        <!-- LEFT CONTAINER'S -->
+        <div class="contentbox">
+            <div class="leftboxs">
+                <div class="lb1">
+                    <div class="lb1txt1">My Profile</div>
+                    <img src="https://www.w3schools.com/w3images/avatar3.png" alt=""> <br>
+                    <hr>
+                    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> &nbsp; &nbsp; Designer, UI</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> &nbsp; &nbsp; London, UK</p>
+                    <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> &nbsp; &nbsp; April 1,
+                        1988
+                    </p>
+                </div>
+
+                <div class="lb2">
+                    <p><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> &nbsp; &nbsp; My Groups</p>
+                    <p><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> &nbsp; &nbsp; My Events</p>
+                    <p><i class="fa fa-users fa-fw w3-margin-right"></i> &nbsp; &nbsp; My Photos</p>
+                </div>
+
+                <div class="lb3">
+                    <p>Interests</p>
+                    <span class="tag1">News</span>
+                    <span class="tag2">W3Schools</span>
+                    <span class="tag2">Labels</span>
+                    <span class="tag2">Games</span>
+                    <span class="tag3">Friends</span>
+                    <span class="tag4">Games</span>
+                    <span class="tag4">Friends</span>
+                    <span class="tag5">Food</span>
+                    <span class="tag5">Design</span>
+                    <span class="tag6">Art</span>
+                    <span class="tag7">Photots</span>
+                </div>
+
+                <div class="lb4">
+                    <p><strong>Hey!</strong></p>
+                    <div class="lb4txt">People are looking at your profile. Find out who.</div>
+                </div>
+            </div>
+
+
+            <!-- MIDDLE CONTAINER'S -->
+            <div class="midboxs">
+                <div class="mb1">
+                    <p>Social Media Platform By Shailendra Singh Jodha.</p>
+                    <input type="text" value="Status: Feeling Blue">
+                    <button type="submit"><i class="fa fa-pencil"></i>  Post</button>
+                </div>
+
+                <div class="mb2">
+                    <div class="upper">
+                        <div class="left">
+                            <img src="https://www.w3schools.com/w3images/avatar2.png" alt=""> &nbsp; John Doe
+                        </div>
+                        <div class="right">1 min</div>
+                    </div>
+                    <hr>
+                    <div class="mb2txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                    <div class="mb2pic">
+                        <img src="https://www.w3schools.com/w3images/lights.jpg" alt="">
+                        <img src="https://www.w3schools.com/w3images/nature.jpg" alt="">
+                    </div>
+                    <div class="mb2btn">
+                        <button type="submit"><i class="fa fa-thumbs-up"></i>  Like</button>
+                        <button type="submit"><i class="fa fa-comment"></i>  Comment</button>
+                    </div>
+                </div>
+
+                <div class="mb3">
+                    <div class="upper">
+                        <div class="left">
+                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt=""> &nbsp; Jane Dae
+                        </div>
+                        <div class="right">16 min</div>
+                    </div>
+                    <hr>
+                    <div class="mb3txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                    <div class="mb3btn">
+                        <button type="submit"><i class="fa fa-thumbs-up"></i>  Like</button>
+                        <button type="submit"><i class="fa fa-comment"></i>  Comment</button>
+                    </div>
+                </div>
+
+                <div class="mb4">
+                    <div class="upper">
+                        <div class="left">
+                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt=""> &nbsp; Angie Jane
+                        </div>
+                        <div class="right">32 min</div>
+                    </div>
+                    <hr>
+                    <p>Have you seen this?</p>
+                    <div class="mb4pic"><img src="https://www.w3schools.com/w3images/nature.jpg" alt=""></div>
+                    <div class="mb4txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                    <div class="mb4btn">
+                        <button type="submit"><i class="fa fa-thumbs-up"></i>  Like</button>
+                        <button type="submit"><i class="fa fa-comment"></i>  Comment</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- RIGHT CONTAINER'S -->
+            <div class="rightboxs">
+                <div class="rb1">
+                    <p>Upcoming Events:</p>
+                    <img src="https://www.w3schools.com/w3images/forest.jpg" alt="">
+                    <h6>Holiday</h6>
+                    <p>Friday 15:00</p>
+                    <button type="submit">Info</button>
+                </div>
+
+                <div class="rb2">
+                    <p>Friend Request</p>
+                    <img src="https://www.w3schools.com/w3images/avatar6.png" alt=""> Jane Doe
+                    <div class="rb2btn">
+                        <div class="btn1"><button type="submit"><i class="fa fa-check"></i></button></div>
+                        <div class="btn2"><button type="submit"><i class="fa fa-remove"></i></button></div>
+                    </div>
+                </div>
+
+                <div class="rb3">
+                    <p>ADS</p>
+                </div>
+
+                <div class="rb4">
+                    <p><i class="fa fa-bug w3-xxlarge"></i></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="foot1">
+            <p>Footer</p>
+        </div>
+        <div class="foot2">
+            <p>Powered by Shailendra Singh Jodha.</p>
+        </div>
+    </div>
+</body>
+
+</html>

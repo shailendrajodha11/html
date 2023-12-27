@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architect Template</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 8vh;
+            background-color: white;
+            align-items: center;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .nav1 {
+            width: 71%;
+            font-family: verdana, sans-serif;
+            font-size: 15px;
+            letter-spacing: 4px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-family: verdana, sans-serif;
+            font-size: 15px;
+            letter-spacing: 4px;
+        }
+
+        /* BG-IMAGE */
+        .mainimg {
+            background-image: url(https://www.w3schools.com/w3images/architect.jpg); 
+            height: 92vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .mainimgtxt {
+            color: white;
+            font-family: verdana, sans-serif;
+            font-size: 250%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .mainimgtxt b {
+            background-color: rgba(0, 0, 0, 0.705);
+            padding: 4%;
+        }
+
+        /* PROJECTS */
+        .project {
+            margin: 5% 2% 2% 2%;
+            font-family: verdana, sans-serif;
+            font-size: 160%;
+            color: black;
+        }
+
+        hr {
+            margin-top: 2%;
+            margin-bottom: 4%;
+        }
+
+        .proimg {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .proimg2 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 1%;
+        }
+
+        .pimg img {
+            width: 40vh;
+        }
+
+        .pimg p {
+            position: absolute;
+            color: white;
+            font-size: 15px;
+            background-color: black;
+            width: 10%;
+            height: 5%;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        /* ABOUT */
+        .about {
+            margin: 5% 2% 2% 2%;
+            font-family: verdana, sans-serif;
+            font-size: 160%;
+            color: black;
+        }
+
+        .abouttxt {
+            font-size: 63%;
+            margin-top: -2%;
+        }
+
+        .abimg {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            font-family: verdana, sans-serif;
+        }
+
+        .aimg img {
+            width: 40vh;
+            margin-top: 7%;
+        }
+
+        .name {
+            font-size: 170%;
+            font-family: verdana, sans-serif;
+            margin: 3%;
+        }
+
+        .pos {
+            font-family: verdana, sans-serif;
+            font-size: 90%;
+            margin: 5%;
+            color: grey;
+        }
+
+        .atxt {
+            margin: 4%;
+            line-height: 160%;
+        }
+
+        .abimg button {
+            width: 100%;
+            height: 5vh;
+            font-family: verdana, sans-serif;
+            border: 0px;
+        }
+
+        /* CONTACTS */
+        .contact {
+            margin: 7% 2% 1% 2%;
+            font-family: verdana, sans-serif;
+            font-size: 160%;
+            color: black;
+        }
+
+        .form {
+            font-family: verdana, sans-serif;
+            font-size: 67%;
+            margin-top: -2%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form input {
+            margin-top: 1.5%;
+            height: 6vh;
+            border: 1px solid grey;
+        }
+
+        .form button {
+            margin-top: 3%;
+            background-color: black;
+            color: white;
+            width: 13%;
+            height: 5vh;
+            border: 1px solid black;
+        }
+
+        /* LAST IMAGE */
+        .lastimg img {
+            margin: 3% 2% 1% 2%;
+            max-width: 96%;
+        }
+
+        /* FOOTER */
+        .footer {
+            width: 100%;
+            background-color: black;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer p {
+            color: white;
+            font-family: verdana, sans-serif;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="nav1"><b>BR </b> Architects</div>
+        <a href="#Projects">Projects</a> &nbsp; &nbsp; &nbsp;
+        <a href="#About">About</a> &nbsp; &nbsp; &nbsp;
+        <a href="#Contact">Contact</a> &nbsp; &nbsp; &nbsp;
+    </div>
+
+
+    <!-- BG-IMAGE -->
+    <div class="mainimg">
+        <div class="mainimgtxt"><b>BR </b> Architects</div>
+    </div>
+
+
+    <!-- PROJECT's SECTION -->
+    <div class="project" id="Projects">
+        Projects
+        <hr>
+        <div class="proimg">
+            <div class="pimg">
+                <p>Summer House</p>
+                <img src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+            </div>
+            <div class="pimg">
+                <p>Brick House</p>
+                <img src="https://www.w3schools.com/w3images/house5.jpg" alt="">
+            </div>
+            <div class="pimg">
+                <p>Renovate</p>
+                <img src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+            </div>
+            <div class="pimg">
+                <p>Barn House</p>
+                <img src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="proimg2">
+            <div class="pimg">
+                <p>Summer House</p>
+                <img src="https://www.w3schools.com/w3images/house5.jpg" alt="">
+            </div>
+            <div class="pimg">
+                <p>Brick House</p>
+                <img src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+            </div>
+            <div class="pimg">
+                <p>Renovate</p>
+                <img src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+            </div>
+            <div class="pimg">
+                <p>Barn House</p>
+                <img src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ABOUT SECTION -->
+    <div class="about" id="About">
+        About
+        <hr>
+        <div class="abouttxt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi laudantium, provident
+            laboriosam maxime officiis molestiae nisi eum temporibus dolore consequatur voluptatibus delectus repellat
+            sapiente illum sequi autem. Autem illum, aperiam expedita suscipit, odio nostrum neque exercitationem quia
+            optio velit eum accusantium inventore facere maiores quae. Deleniti voluptatibus inventore, dolor placeat,
+            iusto natus nihil quasi dolore animi nulla facere officiis hic dolores laborum laboriosam porro quos. Id
+            reiciendis ea natus culpa.</div>
+    </div>
+    <div class="abimg">
+        <div class="aimg">
+            <img src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+            <p class="name">John Doe</p>
+            <p class="pos">CEO & Founder</p>
+            <p class="atxt">ipsum dolor sit amet consectetur. <br> Lorem ipsum dolor sit. <br> Lorem, ipsum.</p>
+            <button type="submit">Contact</button>
+        </div>
+        <div class="aimg">
+            <img src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+            <p class="name">Jane Doe</p>
+            <p class="pos">Architect</p>
+            <p class="atxt">ipsum dolor sit amet consectetur. <br> Lorem ipsum dolor sit. <br> Lorem, ipsum.</p>
+            <button type="submit">Contact</button>
+        </div>
+        <div class="aimg">
+            <img src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+            <p class="name">Mike Ross</p>
+            <p class="pos">Architect</p>
+            <p class="atxt">ipsum dolor sit amet consectetur. <br> Lorem ipsum dolor sit. <br> Lorem, ipsum.</p>
+            <button type="submit">Contact</button>
+        </div>
+        <div class="aimg">
+            <img src="https://www.w3schools.com/w3images/team4.jpg" alt="">
+            <p class="name">Dan Star</p>
+            <p class="pos">Architect</p>
+            <p class="atxt">ipsum dolor sit amet consectetur. <br> Lorem ipsum dolor sit. <br> Lorem, ipsum.</p>
+            <button type="submit">Contact</button>
+        </div>
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="contact" id="Contact">
+        Contact
+        <hr>
+        <div class="form">
+            Let's get in touch and talk about your next project.
+            <input type="text" placeholder=" Name">
+            <input type="email" placeholder=" Email">
+            <input type="text" placeholder=" Subject">
+            <input type="text" placeholder=" Comment">
+            <button type="submit">SEND MESSAGE</button>
+        </div>
+    </div>
+
+
+    <!-- LAST IMAGE -->
+    <div class="lastimg">
+        <img src="https://www.w3schools.com/w3images/map.jpg" alt="">
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>Powered by Shailendra Singh Jodha</p>
+    </div>
+</body>
+
+</html>

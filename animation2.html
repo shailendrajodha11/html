@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .box1{
+            width: 7rem;
+            height: 7rem;
+            background-color: palegreen;
+            position: absolute;
+            /* right: 0px; */
+            top: 250px;
+            animation-name: shailen;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            transform: all 3s ease-in-out;
+        }
+        
+        .box2{
+            width: 7rem;
+            height: 7rem;
+            background-color: rebeccapurple;
+            position: absolute;
+            right: 0px;
+            top: 250px;
+            animation-name: shailen2;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            transform: all 3s ease-in-out;
+        }
+        @keyframes shailen {
+            0%{
+                rotate: 0deg;
+                position: relative;
+                left: 0px;
+            }
+            20%{
+                rotate: 360deg;
+                position: relative;
+                left: 200px;
+            }
+            40%{
+                rotate: 720deg;
+                position: relative;
+                left: 400px;
+            }
+            60%{
+                rotate: 1080deg;
+                position: relative;
+                left: 600px;
+            }
+            80%{
+                rotate: 1440deg;
+                position: relative;
+                left: 800px;
+            }
+            100%{
+                rotate: 1800deg;
+                position: relative;
+                left: 1000px;
+            }
+        }
+
+        @keyframes shailen2 {
+            0%{
+                rotate: 0deg;
+                position: absolute;
+                right: 0px;
+            }
+            20%{
+                rotate: 360deg;
+                position: absolute;
+                right: 200px;
+            }
+            40%{
+                rotate: 720deg;
+                position: absolute;
+                right: 400px;
+            }
+            60%{
+                rotate: 1080deg;
+                position: absolute;
+                right: 600px;
+            }
+            80%{
+                rotate: 1440deg;
+                position: absolute;
+                right: 800px;
+            }
+            100%{
+                rotate: 1800deg;
+                position: absolute;
+                right: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

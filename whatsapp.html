@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whatsapp Layout</title>
+
+  <script src="https://kit.fontawesome.com/98a9a73187.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .outnav {
+      width: 100vw;
+      height: 13.7vh;
+      background-color: #00a884;
+    }
+
+    .outcontainer {
+      width: 100vw;
+      height: 86.3vh;
+      background-color: #e7e8e9;
+    }
+
+    .maincontainer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 95vw;
+      height: 93vh;
+      border: 0px;
+      position: absolute;
+      top: 3vh;
+      left: 2.2vw;
+    }
+
+    .leftcontainer {
+      width: 33%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lnav {
+      width: 100%;
+      height: 8%;
+      background-color: #e9edef;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .lnleft {
+      width: 16%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lnleft a img {
+      width: 3vw;
+      border-radius: 100%;
+      background-color: white;
+    }
+
+    .lnrig {
+      width: 50%;
+      height: 100%;
+      background-color: #e9edef;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .searchbar {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 5vh;
+      margin-top: 0.3vh;
+    }
+
+    .leftcontainer input {
+      width: 88%;
+      height: 4vh;
+      background-color: #e9edef;
+      border: 0px;
+      padding-left: 2%;
+      border-radius: 7px;
+    }
+
+    .srchr hr {
+      margin-top: 0.3vh;
+      width: 100%;
+      color: #e9edef;
+    }
+
+    .contact1 {
+      display: flex;
+      align-items: center;
+      width: 99%;
+      height: 6vh;
+      margin-top: 2%;
+    }
+
+    .contact1 a img {
+      width: 3vw;
+      border-radius: 100%;
+      background-color: white;
+      margin-left: 1vw;
+    }
+
+    .content {
+      margin-left: 5%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      line-height: 115%;
+    }
+
+    .time {
+      margin-left: 25%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: gray;
+      font-size: 70%;
+    }
+
+    .cont hr {
+      width: 85%;
+      margin-left: 15%;
+      margin-top: 2%;
+      background-color: rgb(172, 172, 172);
+    }
+
+    .rightcontainer {
+      width: 66.3%;
+      height: 100%;
+      background-color: #e9edef;
+      display: flex;
+      flex-direction: column;
+      background-image: url(https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
+    }
+
+    .upper {
+      width: 100%;
+      height: 8%;
+      background-color: #e9edef;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-left: 1.9px solid black;
+    }
+
+    .chat {
+      display: flex;
+      align-items: center;
+      width: 99%;
+      height: 6vh;
+    }
+
+    .chat a img {
+      width: 2.7vw;
+      border-radius: 100%;
+      background-color: white;
+      margin-left: 1vw;
+    }
+
+    .chatname {
+      margin-left: 3%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      line-height: 115%;
+    }
+
+    .time {
+      margin-left: 25%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: gray;
+      font-size: 70%;
+    }
+
+    .other {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .mid {
+      width: 100%;
+      height: 79vh;
+    }
+
+    .end {
+      width: 100%;
+      height: 7vh;
+      margin-bottom: 0px;
+      background-color: #e9edef;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .endser {
+      width: 86%;
+      background-color: white;
+      height: 5vh;
+      display: flex;
+      align-items: center;
+      border-radius: 7px;
+      padding-left: 15px;
+    }
+
+    .endser input {
+      width: 90%;
+      height: 100%;
+      margin-left: 2%;
+      border: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="outnav"></div>
+    <div class="outcontainer"></div>
+    <div class="maincontainer">
+      <div class="leftcontainer">
+        <div class="lnav">
+          <div class="lnleft">
+            <a href="#"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgm5a_T9Nfihh1wnYbGlNsSEjm_c7nJGQbag&usqp=CAU"
+                alt="" /></a>
+          </div>
+          <div class="lnrig">
+            <a href="#"><i class="fa-solid fa-users-line" style="color: #707f99"></i></a>
+            <a href="#"><i class="fa-solid fa-circle-notch" style="color: #707f99"></i></a>
+            <a href="#"><i class="fa-solid fa-comment" style="color: #707f99"></i></a>
+            <a href="#"><i class="fa-solid fa-message" style="color: #707f99"></i></a>
+            <a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: #6e7787"></i></a>
+          </div>
+        </div>
+        <div class="searchbar">
+          <input type="search" placeholder="search or start new chat" />
+          <i class="fa-solid fa-bars" style="color: #60646c"></i>
+        </div>
+        <div class="srchr">
+          <hr />
+        </div>
+
+        <div class="contact1">
+          <a href="#"><img
+              src="https://img.freepik.com/free-vector/stylish-wavy-indian-flag-theme-background_1055-7109.jpg"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">INDIA</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>8:59 Am</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgm5a_T9Nfihh1wnYbGlNsSEjm_c7nJGQbag&usqp=CAU"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">Manoj Tripathi</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>9:59 Am</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbjoa6wJrhUDIjvMt8C0PVrUt5tCIGJnLy_g&usqp=CAU"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">M.S Dhoni</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>10:05 Am</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CQDvcER2-SfOBDz5Uc-6LEJ03voQVSKj8A&usqp=CAU"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">Virat Kohli</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>11:00 Am</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://www.jioinstitute.edu.in/sites/default/files/styles/webp/public/founder_image/MDA-image.png.webp?itok=LjLlBUlL"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">Mukesh Ambani</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>7:00 Am</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurna6a42SpKe38ovPipim3STLIjTlU0uXuw&usqp=CAU"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">Bill Gates</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>8:36 Pm</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-29642,resizemode-75,msid-35286293/industry/energy/power/adani-group-gets-rs-5500-crore-tax-notice.jpg"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">kaliya Adani</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>11:59 pm</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYjwDZG3zd_8yGAmB8qmweEBZtKKc_3-eq3w&usqp=CAU"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">Walmart company</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>3:29 Pm</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+        <div class="contact1">
+          <a href="#"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgm5a_T9Nfihh1wnYbGlNsSEjm_c7nJGQbag&usqp=CAU"
+              alt="" /></a>
+          <div class="content">
+            <p class="name" style="font-size: 90%">Honey love</p>
+            <p class="message" style="color: gray; font-size: 75%">
+              Hi, there is a offer for u, get it.
+            </p>
+          </div>
+          <div class="time">
+            <p>1:00 Am</p>
+          </div>
+        </div>
+        <div class="cont">
+          <hr />
+        </div>
+      </div>
+
+      <div class="rightcontainer">
+        <div class="upper">
+          <div class="chat">
+            <a href="#"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CQDvcER2-SfOBDz5Uc-6LEJ03voQVSKj8A&usqp=CAU"
+                alt="" /></a>
+            <div class="chatname">
+              <p class="name" style="font-size: 90%">Virat Kohli</p>
+            </div>
+          </div>
+          <div class="other">
+            <i class="fa-solid fa-video" style="color: #757b84"></i>
+            <i class="fa-solid fa-magnifying-glass" style="color: #6b6f76"></i>
+            <i class="fa-solid fa-ellipsis-vertical" style="color: #5e6268"></i>
+          </div>
+        </div>
+        <div class="mid"></div>
+        <div class="end">
+          <a href="#"><i class="fa-solid fa-plus" style="color: #5e6166"></i></a>
+          <div class="endser">
+            <a href="#"><i class="fa-regular fa-face-smile" style="color: #48494c"></i></a>
+            <input type="text" placeholder="Type a message" />
+          </div>
+          <i class="fa-solid fa-microphone" style="color: #393a3c"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

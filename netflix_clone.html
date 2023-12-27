@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="net_logo.png">
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* BODY */
+        body{
+            background-color: black;
+            height: 160vh;
+            box-sizing: border-box;
+        }
+
+        /* Main CONTAINER */
+        .container{
+            width: 100%;
+            display: flex;
+            box-sizing: content-box;
+        }
+        .container img{
+            min-width: 98.7vw;
+            min-height: 160vh;
+            opacity: 49%;
+        }
+
+        /* NETFLIX LOGO IMAGE */
+        .logo img{
+            position: absolute;
+            width: 15vw;
+            top: 2.5%;
+            left: 2.5%;
+        }
+
+        /* SIGNIN & SIGNUP OUTER */
+        .login{
+            position: absolute;
+            width: 35.5vw;
+            height: 93vh;
+            background-color: rgba(0,0,0,.75);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 14vh;
+            left: 32vw;
+            border-radius: 1%;
+        }
+
+        /* SIGN IN BOX */
+        .signin{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+        .mntxt{
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            color: white;
+            font-size: 5vh;
+            margin-top: 9%;
+            margin-left: 14%;
+        }
+        .inputs input{
+            display: block;
+            margin-top: 5%;
+            margin-left: 14%;
+            width: 23vw;
+            height: 7vh;
+            padding-left: 5%;
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            font-size: 105%;
+            border: 0px;
+            border-radius: 4px;
+            background-color: #333;
+        }
+        .submit button{
+            display: block;
+            margin-top: 10%;
+            margin-left: 14%;
+            width: 25vw;
+            height: 6.5vh;
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            font-size: 105%;
+            border: 0px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .submit a{
+            text-decoration: none;;
+        }
+        .submit a button{
+            text-decoration: none;
+            background-color: #e50914;
+            color: white;
+        }
+
+        .rem{
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            font-size: 87%;
+            color: #888585;
+            margin-top: 3%;
+            margin-left: 14%;
+            /* display: flex; */
+        }
+
+        .help{
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            font-size: 85%;
+            color: #888585;
+            margin-top: -4%;
+            margin-left: 14%;
+            display: flex;
+            justify-content: right;
+            margin-right: 15.5%;
+        }
+        .help a{
+            text-decoration: none;
+            color: #888585;
+        }
+
+        /* SIGN UP BOX */
+        .signup{
+            width: 100%;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+        }
+        .upnow{
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            color: #8c8c8c;
+            margin-left: 14%;
+            margin-top: 8%;
+        }
+        .upnow a{
+            text-decoration: none;
+            color: white;
+        }
+        .txt{
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            color: #8c8c8c;
+            margin-left: 14%;
+            margin-top: 4%;
+            margin-right: 20%;
+            font-size: 80%;
+        }
+        .txt a{
+            text-decoration: none;
+            color: #0080ff;
+        }
+
+        /* FOOTER */
+        .footer{
+            width: 98.8vw;
+            height: 38vh;
+            position: absolute;
+            box-sizing: content-box;
+            background-color: rgba(0,0,0,.75);
+            bottom: -60vh;
+            /* display: flex; */
+        }
+        .que{
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            color: #8c8c8c;
+            margin-top: 3%;
+            margin-left: 8%;
+        }
+        .option1{
+            margin-top: 3%;
+            margin-left: 0%;
+        }
+        .option1 ul{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 8%;
+            margin-right: 25%;
+            list-style: none;
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            font-size: 85%;
+        }
+        ul li a{
+            color: #8c8c8c;
+            text-decoration: none;
+        }
+        .option2{
+            margin-top: 2%;
+        }
+        .option2 ul{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 8%;
+            margin-right: 62.5%;
+            list-style: none;
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+            font-size: 85%;
+        }
+        
+        .lang{
+            margin-top: 2.5%;
+            margin-left: 8%;
+        }
+        .lang select{
+            width: 10vw;
+            height: 7vh;
+            border: 1px solid white;
+            border-radius: 6%;
+            background-color: #000;
+            color: #8c8c8c;
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main IMAGE -->
+    <div class="container">
+        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/77d35039-751f-4c3e-9c8d-1240c1ca6188/cf244808-d722-428f-80a9-052acdf158ec/IN-en-20231106-popsignuptwoweeks-perspective_alpha_website_medium.jpg" alt="">
+    </div>
+
+    <!-- NETFLIX LOGO -->
+    <div class="logo"><a href="https://www.netflix.com/in/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt=""></a></div>
+
+    <!-- REGISTRATION BOX -->
+    <div class="login">
+        <!-- SIGN IN BLOCK -->
+        <div class="signin">
+            <div class="mntxt">Sign In</div>
+            <div class="inputs">
+                <input type="text" placeholder="Email or phone number">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="submit">
+                <a href="https://www.netflix.com/in/"><button type="submit">Sign In</button></a>
+            </div>
+            <div class="rem">
+                <input type="checkbox"> Remember me
+            </div>
+            <div class="help"><a href="https://www.netflix.com/in/LoginHelp">Need help?</a></div>
+        </div>
+        <!-- SIGN UP BLOCK -->
+        <div class="signup">
+            <div class="upnow">
+                New to Netflix? <a href="https://www.netflix.com/in/">Sign Up now.</a>
+            </div>
+            <div class="txt">
+                This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more. </a><br><br> The information collected by Google reCAPTCHA is subject to the Google <a href="#">Privacy Policy</a> and <a href="">Terms of Service</a>, and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="que">Questions? Call 000-800-919-1694</div>
+        <div class="option1">
+            <ul>
+                <li><a href="https://help.netflix.com/en/node/412">FAQ</a></li>
+                <li><a href="https://help.netflix.com/en/">Help Center</a></li>
+                <li><a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a></li>
+                <li><a href="https://help.netflix.com/legal/privacy">Privacy</a></li>
+            </ul>
+        </div>
+        <div class="option2">
+            <ul>
+                <li><a href="https://help.netflix.com/en/">Cookies Prefrences</a></li>
+                <li><a href="https://help.netflix.com/legal/corpinfo">Corporate Information</a></li>
+            </ul>
+        </div>
+        <div class="lang">
+            <select name="language" id="">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+            </select>
+        </div>
+    </div>
+
+
+</body>
+</html>

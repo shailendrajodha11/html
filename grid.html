@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .maincontainer {
+            height: 100vh;
+            background-color: #f1f1f1;
+            display: grid;
+            grid-template-rows: 1fr 7fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .header {
+            background-color: rgb(62, 62, 124);
+        }
+
+        .middle {
+            background-color: #f1f1f1;
+            display: grid;
+            grid-template-columns: 2fr 4fr 2fr;
+            grid-gap: 21px;
+        }
+
+        .col1 {
+            margin-left: 5px;
+            background-color: #a33333;
+            display: grid;
+            grid-template-rows: 2fr 2fr 1fr 1fr;
+            grid-gap: 7px;
+        }
+        .col1div{
+            background-color: yellowgreen;
+        }
+        .col2 {
+            background-color: rgb(33, 165, 103);
+        }
+
+        .col3 {
+            margin-right: 5px;
+            background-color: #a33333;
+            display: grid;
+            grid-template-rows: 2fr 2fr 1fr 2fr;
+            grid-gap: 7px;
+        }
+        .col3div{
+            background-color: palevioletred;
+        }
+
+        .footer {
+            background-color: rgb(62, 62, 124);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="header"></div>
+        <div class="middle">
+            <div class="col1">
+                <div class="col1div"></div>
+                <div class="col1div"></div>
+                <div class="col1div"></div>
+                <div class="col1div"></div>
+            </div>
+            <div class="col2"></div>
+            <div class="col3">
+                <div class="col3div"></div>
+                <div class="col3div"></div>
+                <div class="col3div"></div>
+                <div class="col3div"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
